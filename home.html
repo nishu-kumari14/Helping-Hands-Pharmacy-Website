@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helping Hands</title>
+    <link rel="web-icon" type="image/png" href="helping_hand_logo.png">
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:ital,wght@1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image:url"\body parts\med 3.jpg";
+    background-size: cover;
+    backface-visibility: 200;
+    background-position: center;
+}
+.navbar{
+    width: 100%;
+
+    padding: 10 px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00509d;
+}
+.logo{
+    width: 130px;
+    cursor: pointer;
+
+}
+
+  
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(221, 44, 44);
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: #100dde;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: rgb(129, 15, 15);
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+    font-size: 150px;
+    font-weight: bolder;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-size: 65px;
+    font-family: "Lato","sans-serif";
+    font-style: italic;
+    color: white;
+}
+.button{
+    width: 200px;
+    padding: 15% 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: rgb(153, 21, 21);
+    cursor: pointer;
+
+}
+.span{
+
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+.button:hover span{
+    width: 100%;
+
+}
+.services {
+    text-align: center;
+    padding: 0 40px; /* Adjust the padding as needed */
+    font-size: 3rem;
+    font-family: 'Lato', "sans-serif";
+    color: #fdc500;
+}
+
+.home{
+    background-color: #00509d;
+}
+.services2{
+    display: flex;
+    width: auto;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.services2s{
+    /* border:10px solid black; */
+
+    border-radius: 2rem;
+    box-shadow: 100px;
+    margin: 20px;
+}
+.services2s img{
+    display: block;
+    padding:5px;
+    object-fit: contain;
+    border-radius: 25px;
+    width: 50%;
+
+}
+.login{
+    color: black;
+    font-size: 30px;
+}
+
+
+/* Footer setion  */
+.fotter1{
+display: grid;
+background: rgb(1,0,36);
+background: linear-gradient(14deg, rgba(1,0,36,1) 3%, rgba(58,136,145,1) 40%, rgba(58,136,145,1) 100%);
+
+
+
+}
+.fa {
+    padding: 20px;
+    font-size: 60px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;}
+.fa-instagram {
+        background: #125688;
+        color: white;}
+.footer3{
+    font-size: 10px;
+    color: azure;
+}
+
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:42px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:40px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+    </style>
+</head>
+<body class="home">
+    <div class="navbar">
+        <img src="logo - Copy.jpg" class="logo" />
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="html project.html">Awareness</a></li>
+            <li><a href="Medicines.html">Store</a></li>
+        </ul>
+    </div>
+    <div class="services">
+      <h1>Helping Hands</h1>
+      <p1>We Provide World Class Services.</p1>
+  </div>
+  <div>
+      <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Pharmacy/Brands/Acuvue_PC.jpg" width="100%" />
+  </div>
+  <div>
+      <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Pharmacy/Icon_PC.jpg" width="100%" />
+  </div>
+  <div class="services2">
+      <div class="services2s">
+          <a href="https://www.betterhealth.vic.gov.au/health/servicesandsupport/regular-health-checks">
+              <img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/10dfe8c8aa7-HealthCheckups.jpg?dim=256x0" />
+          </a>
+      </div>
+      <div class="services2s">
+          <a href="https://www.who.int/news-room/fact-sheets/detail/diabetes#:~:text=Diabetes%20is%20a%20chronic%20disease,hormone%20that%20regulates%20blood%20glucose.">
+              <img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/69588f95674-Diabetes.jpg?dim=256x0" alt="" />
+          </a>
+      </div>
+      <div class="services2s">
+          <a href="https://en.wikipedia.org/wiki/Vitamin">
+              <img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/6c5479c6c0c-Vitamins.jpg?dim=256x0" alt="" />
+          </a>
+      </div>
+      <div class="services2s">
+          <a href="https://my.clevelandclinic.org/health/diseases/8541-thyroid-disease">
+              <img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/c507b2563fd-thyroid.png?dim=256x0" alt="" />
+          </a>
+      </div>
+      <div class="services2s">
+          <a href="https://kidshealth.org/en/teens/supplies.html">
+              <img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/eeb3fe3251f-WomenCare.jpg?dim=256x0" alt="" />
+          </a>
+      </div>
+      <div class="services2s">
+          <a href="https://www.mayoclinic.org/diseases-conditions/heart-disease/symptoms-causes/syc-20353118">
+              <img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/a953829ca96-Heart.jpg?dim=256x0" alt="" />
+          </a>
+      </div>
+      <div class="services2s">
+          <a href="https://medlineplus.gov/fever.html">
+              <img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/355e9b77fb5-FeverInfection.jpg?dim=256x0" alt="" />
+          </a>
+      </div>
+      <div class="services2s">
+          <a href="https://www.healthline.com/health/fitness-nutrition/healthy-lifestyle-benefits">
+              <img src="https://cms-contents.pharmeasy.in/homepage_top_categories_images/94616a36a9a-Lifestyle.jpg?dim=256x0" alt="" />
+          </a>
+      </div>
+  </div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>Adresss :</h6>
+                    <p class="text-justify">Building number 34<br> Puda Complex
+                      <br>
+                        <strong>Phone:</strong> +91 12345 67890
+                    </p>
+                </div> 
+            </div>
+            <hr>
+        </div>
+    </footer>
+</body>
+</html>

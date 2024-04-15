@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Medicines</title>
+  <link rel="web-icon" type="jpg" href="/helping_hand logo.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'> 
+    <!-- <link rel="stylesheet" href="Medicines.css">  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    .glyphicon { margin-right:5px; }
+    .navbar {
+      /* background-color: #333; */
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+   .navbar-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      margin: 0 20px;
+    }
+
+   .navbar-item {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+    }
+
+   .navbar-item:hover {
+      background-color: #111;
+      border-bottom: 2px solid white;
+    }
+
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #428bca;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: left;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+    <div class="well">
+        <strong>Medicine Store</strong>
+        <nav class="navbar">
+            <div class="navbar-container">
+              <a href="home" class="navbar-item">Home</a>
+              <a href="aboutus.html" class="navbar-item">About</a>
+              <a href="html project.html" class="navbar-item">Awareness</a>
+              <a href="add-to-cart.html" class="navbar-item">Cart</a>
+            </div>
+          </nav>
+        <div class="btn-group">
+        </div>
+    </div>
+    <div id="products" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image"  onclick="render()" src="Paracet.jpg" alt="Paracetemol" >
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Paracetemol</h4>
+                    <p class="group inner list-group-item-text">
+                        Product description : Paracetamol (Panadol, Calpol, Alvedon) is an analgesic and antipyretic drug that is used to temporarily relieve mild-to-moderate pain and fever</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ₹50</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form action="add-to-cart.html" method="POST">
+  <input type="hidden" name="productId" value="123">
+  <button type="submit" onclick="addToCart('Paracetemol',50)">Add to cart</button>
+</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="Shelcal.jpg" alt=" Shelcal 500 Calcium+Vitamin D3 Tablet" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Shelcal 500 Calcium+Vitamin D3 Tablet</h4>
+                    <p class="group inner list-group-item-text">
+                        Product Description : Helps manage calcium deficiency
+Vitamin D3 helps improve the absorption of calcium
+Helps manage bone conditions
+Improves bone and joint health.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ₹174</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form action="/add-to-cart" method="POST">
+                                <input type="hidden" name="productId" value="123">
+                                <button type="submit" onclick="addToCart('Shelcal 500 Calcium+Vitamin D3 Tablet',174)">Add to cart</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="loc.jpeg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Loc Tears Eye Drop</h4>
+                    <p class="group inner list-group-item-text">
+                        Loc Tears Fusion Eye Drop is an eye lubricant used to relieve dry eyes. It helps to soothe the irritation and burning seen in dry eyes by maintaining proper lubrication of the eyes.</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ₹83</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form action="/add-to-cart" method="POST">
+                                <input type="hidden" name="productId" value="123">
+                                <button type="submit" onclick="addToCart('Loc Tears Eye Drop',83)">Add to cart</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="Volini.jpeg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Volini Pain Relief Gel</h4>
+                    <p class="group inner list-group-item-text">
+                        Get quick relief from body pain with the Volini spray. The spray can offer quick relief from pain in the muscles. Volini work on the muscle by acting upon the problematic area.  Volini is highly effective in the case of sports injuries as well, be it muscle pulls, slight strains, or even sprains.
+                    </p>
+                        
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ₹150</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form action="/add-to-cart" method="POST">
+                                <input type="hidden" name="productId" value="123">
+                                <button type="submit" onclick="addToCart('Volini Pain Relief Gel',150)">Add to cart</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="Crocin.jpeg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Crocin Advance Tablet</h4>
+                    <p class="group inner list-group-item-text">
+                        Crocin Advance 500mg Tablet helps relieve pain and fever. It is used to treat headaches, migraine, toothaches, sore throats, period (menstrual) pains.
+                    </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ₹123</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form action="/add-to-cart" method="POST">
+                                <input type="hidden" name="productId" value="123">
+                                <button type="submit" onclick="addToCart('Crocin Advance Tablet',123)">Add to cart</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="Atrax.jpeg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Atarax Anti-Itch Lotion</h4>
+                    <p class="group inner list-group-item-text">
+                        It is a body lotion enriched with glycerine, aloe vera and pramoxine hydrochloride that relieves itchy and dry skin.Glycerine and aloe vera deeply moisturise the skin</p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ₹198</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form action="/add-to-cart" method="POST">
+                                <input type="hidden" name="productId" value="198">
+                                <button type="submit" onclick="addToCart('Atarax Anti-Itch Lotion',198)">Add to cart</button>
+                              </form>
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/xxatqaspylkcpjlem5g4.jpg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Providine</h4>
+                    <p class="group inner list-group-item-text">
+                        Betadine 10% Ointment is an antiseptic and disinfectant agent. It is used for the treatment and prevention of infections in wounds and cuts.It kills the harmful microbes and controls their growth
+                    </p>
+                        
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ₹142</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form action="/add-to-cart" method="POST">
+                                <input type="hidden" name="productId" value="123">
+                                <button type="submit" onclick="addToCart('Providine',142)">Add to cart</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/b37wqa164zm5979srekw.jpg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Silverex Ionic Gel</h4>
+                    <p class="group inner list-group-item-text">
+                        Silverex Ionic Gel is an inorganic chemical with antiseptic activity. It is used for the prevention of infections in burns and wounds. On application, it releases silver ions into the skin
+                    </p>
+                        
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ₹153</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form action="/add-to-cart" method="POST">
+                                <input type="hidden" name="productId" value="123">
+                                <button type="submit" onclick="addToCart('Silverex Ionic Gel',153)">Add to cart</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/rwyet3tzxloaozxlafsk.jpg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Nilac Gel</h4>
+                    <p class="group inner list-group-item-text">
+                        Nilac Gel is a combination medicine that is used to treats acne. It minimizes excessive oil production, thus reduces inflammation. It also prevents the growth of the microorganisms that cause acne.
+                    </p>
+                        
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ₹226</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form action="/add-to-cart" method="POST">
+                                <input type="hidden" name="productId" value="123">
+                                <button type="submit" onclick="addToCart('Nilac Gel',226)">Add to cart</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="Nirva.jpg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Nirvasa Vitamin D3+K2 Tablet</h4>
+                    <p class="group inner list-group-item-text">
+                        Nirvasa Vitamin D3+K2 Tablet (60 Each) helps the body absorb calcium more effectively and direct it to the correct body parts, strengthening bones and reducing bone loss. These tablets balance the rate of heartbeats, increase heart muscle endurance, and guard against some heart-related problems.
+
+                    </p>
+                        
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ₹190</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form action="/add-to-cart" method="POST">
+                                <input type="hidden" name="productId" value="123">
+                                <button type="submit" onclick="addToCart('Nirvasa Vitamin Tablets',190)">Add to cart</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="Xyy.jpg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Xylomist 0.1% Nasal Drops for Mucosal Decongestion</h4>
+                    <p class="group inner list-group-item-text">
+                        Xylomist 0.1% Nasal Drops is a nasal decongestant that contains Xylometazoline Hydrochloride as the active ingredient. It is used for the temporary relief of nasal congestion caused by conditions such as the common cold, allergies, and sinusitis
+                    </p>
+                        
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ₹53.9</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form action="/add-to-cart" method="POST">
+                                <input type="hidden" name="productId" value="123">
+                                <button type="submit" onclick="addToCart('Xylomist Nasal Drops',53.9)">Add to cart</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="Volini.jpeg" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        Volini Pain Relief Gel</h4>
+                    <p class="group inner list-group-item-text">
+                        Get quick relief from body pain with the Volini spray. The spray can offer quick relief from pain in the muscles.
+                    </p>
+                        
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ₹150</p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <form action="/add-to-cart" method="POST">
+                                <input type="hidden" name="productId" value="123">
+                                <button type="submit" onclick="addToCart('Volini Pain Relief Gel',150)">Add to cart</button>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function addToCart(name,price) {
+      var cart = localStorage.getItem('cart');
+      if (!cart) {
+          cart = [];
+      } else {
+          cart = JSON.parse(cart);
+      }
+      var product = { name: name, price: price }; 
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+//   function render(){
+//     window.location.href = "https://www.nhs.uk/medicines/paracetamol-for-adults/";
+//   }
+  
+  </script>
+</body>
+</html>

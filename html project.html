@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .container a {
+    flex: 1 1 20%;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #ced4da; /* Add border to each image with a suitable color */
+    border-radius: 5px; /* Add border radius for a more professional look */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.container a:hover {
+    border-color: #007bff; /* Change border color on hover */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add box-shadow on hover for a more professional look */
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px; /* Add border radius to match the anchor border radius */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://medlineplus.gov/healthtopics.html"><img src="brain.jpg"></a>
+        <a href="https://www.doconline.com/what-we-treat/eye-problems"><img src="human-eye.webp"></a>
+        <a href="https://medlineplus.gov/lungdiseases.html"><img src="lungs.jpg"></a>
+        <a href="https://www.mayoclinic.org/diseases-conditions/heart-disease/diagnosis-treatment/drc-20353124"><img src="heart.png"></a>
+        <a href="https://www.mayoclinic.org/diseases-conditions/liver-problems/diagnosis-treatment/drc-20374507"><img src="liver.jpg"></a>
+        <a href="https://my.clevelandclinic.org/health/articles/7040-gastrointestinal-diseases"><img src="stomach.jpg"></a>
+        <a href="https://my.clevelandclinic.org/health/diseases/17689-kidney-failure"><img src="kidney.webp"></a>
+        <a href="https://www.webmd.com/digestive-disorders/digestive-diseases-pancreatitis"><img src="pancreas.jpg"></a>
+    </div>
+</body>
+</html>
